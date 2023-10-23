@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  magazinemanager.server:
+    image: ${DOCKER_REGISTRY-}magazinemanagerserver
+    build:
+      context: .
+      dockerfile: MagazineManager/Server/Dockerfile
