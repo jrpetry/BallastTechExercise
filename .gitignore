@@ -5,3 +5,7 @@
 /MagazineManager/Server/obj
 /.vs
 /MagazineManager/Server/bin/Debug/net6.0
+/bin/Debug
+/obj
+/MagazineManagerTest/bin/Debug/net6.0
+/MagazineManagerTest/obj
