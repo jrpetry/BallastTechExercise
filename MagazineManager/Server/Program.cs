@@ -1,6 +1,5 @@
 using MagazineManager.Models;
 using MagazineManager.Server.Controllers.CustomExceptions;
-using MagazineManager.Server.Controllers.Filters;
 using MagazineManager.Server.Data.Repositories.Abstraction;
 using MagazineManager.Server.Data.Repositories.Implementation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -12,12 +11,6 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors();
-
-// Action Filters
-builder.Services.AddControllers(options =>
-{
-    options.Filters.Add<AuthenticateActionFilter>();
-});
 
 // Authentication
 builder.Services.AddAuthentication(options =>

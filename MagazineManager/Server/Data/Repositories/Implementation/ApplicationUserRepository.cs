@@ -4,7 +4,7 @@ using MagazineManager.Server.Data.Repositories.Abstraction;
 
 namespace MagazineManager.Server.Data.Repositories.Implementation
 {
-    internal class ApplicationUserRepository : BaseRepository<ApplicationUser>
+    public class ApplicationUserRepository : BaseRepository<ApplicationUser>
     {
         const string TABLE_NAME = "APPLICATION_USERS";
         const string PARAMS_COMMA_SEPARATED = "@UserName , @Pwd, @Role";

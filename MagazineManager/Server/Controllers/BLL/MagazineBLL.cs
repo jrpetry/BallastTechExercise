@@ -8,11 +8,9 @@ namespace MagazineManager.Server.Controllers.BLL
     internal class MagazineBLL
     {
         MagazineRepository _repo;
-        ApplicationUserBLL _applicationUserBLL;
-        internal MagazineBLL(BaseRepository<Magazine> repository, BaseRepository<ApplicationUser> repositoryApplicationUser)
+        internal MagazineBLL(BaseRepository<Magazine> repository)
         {
             _repo = (MagazineRepository)repository;
-            _applicationUserBLL = new ApplicationUserBLL(repositoryApplicationUser);
         }
 
         internal Magazine Get(int id)

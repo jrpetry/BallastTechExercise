@@ -11,13 +11,11 @@ namespace MagazineManager.Server.Controllers
     [Authorize] //All methods of this controller accept only authorized requests
     public class MagazineController : ControllerBase
     {
-        private readonly ILogger<MagazineController> _logger;
         private readonly MagazineBLL _magazineBLL;
 
-        public MagazineController(ILogger<MagazineController> logger, BaseRepository<Magazine> repo, BaseRepository<ApplicationUser> repositoryApplicationUser)
+        public MagazineController(BaseRepository<Magazine> repo)
         {
-            _magazineBLL = new MagazineBLL(repo, repositoryApplicationUser);
-            _logger = logger;
+            _magazineBLL = new MagazineBLL(repo);
         }
 
         // GET: api/<MagazineController>

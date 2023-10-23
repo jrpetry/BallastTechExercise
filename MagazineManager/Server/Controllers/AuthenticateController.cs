@@ -1,5 +1,4 @@
 ﻿using MagazineManager.Server.Controllers.BLL;
-using MagazineManager.Server.Controllers.Filters;
 using MagazineManager.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -12,7 +11,6 @@ namespace MagazineManager.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AuthenticateActionFilter]
     public class AuthenticateController : ControllerBase
     {
         private readonly IConfiguration _configuration;

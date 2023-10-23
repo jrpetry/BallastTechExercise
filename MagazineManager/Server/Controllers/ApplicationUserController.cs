@@ -12,12 +12,10 @@ namespace MagazineManager.Server.Controllers
     public class ApplicationUserController : ControllerBase
     {
         //Injected
-        private readonly ILogger<ApplicationUserController> _logger;
         private readonly ApplicationUserBLL _applicationUserBLL;
 
-        public ApplicationUserController(ILogger<ApplicationUserController> logger, BaseRepository<ApplicationUser> repo)
+        public ApplicationUserController(BaseRepository<ApplicationUser> repo)
         {
-            _logger = logger;
             _applicationUserBLL = new ApplicationUserBLL(repo);
         }
 
