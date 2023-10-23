@@ -4,6 +4,3 @@
 
 Execute this script to create de Database
 	C:\Users\Admin\source\repos\MagazineManager\MagazineManager\Server\Data\Scripts\DBCreation.sql
-
-Install Angular
-npm install -g @angular/cli
